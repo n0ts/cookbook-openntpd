@@ -1,0 +1,9 @@
+# This file is managed by Chef for <%= node['fqdn'] %>
+# Do NOT modify this file directly.
+<% @listen.each do |interface| %>
+listen on <%= interface %>
+<% end %>
+
+<% @servers.each do |server| %>
+servers <%= server %>
+<% end %>
