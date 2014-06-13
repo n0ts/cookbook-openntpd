@@ -33,3 +33,10 @@ default['openntpd'] = {
   ],
   'listen' => []
 }
+
+case node['platform_family']
+when 'rhel'
+  default['openntpd']['prefix'] = '/etc'
+else
+  default['openntpd']['prefix'] = '/etc/openntpd'
+end

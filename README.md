@@ -15,6 +15,7 @@ platform selection logic. This attribute was introduced in Ohai v0.6.12.
 The following platform families are supported:
 
 * Debian
+* CentOS
 
 Attributes
 ----------

@@ -33,7 +33,7 @@ service 'openntpd' do
   action [:enable, :start]
 end
 
-template '/etc/openntpd/ntpd.conf' do
+template "#{node['openntpd']['prefix']}/ntpd.conf" do
   source 'ntpd.conf.erb'
   owner 'root'
   group 'root'
